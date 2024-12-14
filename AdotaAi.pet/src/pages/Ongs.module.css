@@ -1,0 +1,72 @@
+.conteudo{   
+    display: grid;
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 20px;
+    background-color: white;
+    margin-bottom: 3em;
+    border-radius: 1em;
+    padding: 2em; 
+    margin-top: 3em;
+}
+
+
+
+.disponiveis input[type=text]{
+    width: 60%;
+    height: 2.5rem;
+    border-radius: 1em;
+}
+
+
+.perfil{        
+    width: 100%;
+    display: flex; 
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+    background-color: white;
+    
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.041);
+}
+
+.perfil:hover{
+
+    box-shadow: 2px 2px 34px rgba(0, 0, 0, 0.096);
+}
+
+.perfil img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 20px;
+    margin-right: 2rem;
+}
+
+.infos_perfil{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+ img.localizacao{
+    height: 2rem;
+    width: 2rem;
+}
+
+ img.seta{
+    height: 4rem;
+    width: 4rem;
+    margin-left: auto;
+    margin-top: auto;        
+    cursor: pointer;
+}
+
+h2.nome{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.8em;
+    color: orange;
+}
+
+.descricao{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+}

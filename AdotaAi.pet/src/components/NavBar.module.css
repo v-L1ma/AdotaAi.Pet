@@ -6,7 +6,7 @@
 }
 
 header{
-    background-color: #ffa600c2;
+    background-color: white;
     width: 100%;
     height: 7vh;   
 }
@@ -22,7 +22,8 @@ header{
 }
 
 .nav img{
-    width: 4em;
+    width: 5em;
+    height: 5em;
 }
 
 .nav ul{
@@ -32,15 +33,16 @@ header{
 }
 
 .itens{
-    font-size: 1.4em;
+    font-size: 1.5em;
     text-decoration: none;
-    color: white;
+    color: #ffa600;
     font-weight: bolder;
 }
 
 .itens:hover{
-    color: white;
-    text-shadow: 1px 1px 6px rgb(133, 8, 250);
+    border-bottom: 5px solid orange;
+    padding-bottom: .7em;
+    transition: border 100ms;
 }
 
 .cadastrar{
@@ -48,7 +50,6 @@ header{
 }
 
 .popup{
-    background-color: blue;
     width: 60vw;
     height: 70vh;
     position: absolute;

@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import styles from "./NavBar.module.css";
 import { useState } from "react";
 import LoginPopUp from "./LoginPopUp";
+import Logo from "../assets/logo.png"
 
 function NavBar() {
   const [abrirPopup, setAbrirPopup] = useState(false);
@@ -11,7 +12,7 @@ function NavBar() {
       <nav className={styles.nav}>
         <Link to="/">
           <img
-            src="https://static.vecteezy.com/ti/vetor-gratis/p1/6720668-cara-de-cachorro-logo-gratis-vetor.jpg"
+            src={Logo}
             alt=""
           />
         </Link>

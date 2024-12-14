@@ -1,16 +1,18 @@
-main{
-    background-color: #71556b;
-}
 
 .filtros{
-    background-color: rgb(214, 12, 12);
-    width: 80%;
+    background-color: white;
+    width: 100%;
     margin-top: 2em;
     padding: 1em;
     margin-bottom: 2em;    
     border-radius: 1em;
     margin: 0 auto;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.041);
 }
+.filtros div{
+    margin: 3em 0em 3em 3em;
+}
+
 
 .filtros select{
     width: 45%;
@@ -35,7 +37,6 @@ main{
 .filtros button{
     width: 92%;
     margin-left: 1em;
-    background-color: #766788;
     color: white;
     font-size: 1.3em;
     padding: .5em;
@@ -54,14 +55,14 @@ main{
     text-align: left;
 }
 
-.photos{
+.card{
     display: inline-block;
     width: 40%;
     border-radius: 10px;
     box-shadow: 0px 0 20px -10px rgba(0, 0, 0, 0.418);
 }
 
-.photos > img{
+.card > img{
     margin-left: 200px;
     width: 300px;
     height: 300px;
@@ -112,32 +113,32 @@ main{
 }
 
 .gallery{
-    width: 90vw;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(1, 90vw);
-    justify-content: space-between;
+    width: 90%;
+    margin: 50px auto;
     gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.photos{
-    width: 90vw;
+.card{
+    width: 20%;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.507);
 }
 
-.photos:hover{
+.card:hover{
     scale: 1.02;
     transition: 200ms;
 }
 
-.photos img{
-    width: 90vw;
+.card img{
+    width: 100%;
 }
 
 .infos{
-    width: 80vw;
+    width: 100%;
     padding: 20px;
     border-radius: 0px 0px 10px 10px;
     color: white;

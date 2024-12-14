@@ -1,0 +1,329 @@
+
+
+.disponiveis h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+    color: orange;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+.conteudo{
+    background-color: white;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+label{
+    color: orange;
+    font-size: 1.2rem;
+}
+
+input[type=text]{
+    border-radius: 5px;
+    height: 1.4rem;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border: 0.5px solid #766788;
+}
+
+.radio{
+    height: 16px;
+    width: 16px;
+    margin-bottom: 20px;        
+    border: 2px solid #766788;
+}
+
+input[type='radio']:checked{
+    border-color: #f97070;
+  }
+
+input[type=checkbox]{
+    height: 16px;
+    width: 16px;
+    margin-bottom: 20px;        
+    border: 0.5px solid #766788;
+}
+
+/*#disponiveis{
+    margin-top: 30px;
+    padding: 0px;
+}
+
+
+#disponiveis > h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+    color: #71556b;
+    margin-bottom: 40px;
+}
+
+.photos{
+    display: inline-block;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0 20px -10px rgba(0, 0, 0, 0.418);
+}
+
+.photos > img{
+    margin-left: 200px;
+    width: 300px;
+    height: 300px;
+    margin-left: 0px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.infos{
+    background-color: #ffffff;
+    width: 290px;
+    height: 105px;
+    margin-top: -5px;
+    border-radius: 0px 0px 10px 10px;
+    padding: 5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nome{
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: #766788;
+}
+
+.infos p{
+    color: grey;
+}
+
+.infos a{
+    text-decoration: none;    
+    color: #766788;
+}
+
+#vermais{
+    height: 50px;
+    font-size: 1.5em;
+    color: white;
+    border: 3px solid #126782;
+    background-color: #126782;
+    border-radius: 10px;
+    padding: 5px;
+    padding-bottom: 5px;
+    margin-left: 90px;
+}*/
+
+/*-----------------------------------estilos para desktop---------------------------------*/
+
+@media screen and (min-width: 768px){
+ 
+    
+    section{
+        height: 100vh;
+    }
+    
+    body{
+        background-color: rgba(255, 255, 255, 0.103);
+    }
+
+    main{
+        width: 70vw;
+        margin: auto;
+    }
+
+    .conteudo{
+        background-color: rgb(255, 255, 255);
+        margin: 2em auto;
+        width: 65vw;
+        border-radius: 1em;
+        padding: 2em;
+        box-sizing: border-box;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.075);
+    }
+
+    .cadastro{
+        display: grid;
+        grid-template-areas: 
+        "nome      foto"
+        "raca      raca"
+        "nasc      sexo"
+        "perguntas perguntas"
+        "descricao descricao"
+        "botao botao";
+
+    }
+
+    .nome{
+        grid-area: nome;
+        width: 100%;
+    }
+    
+    p{        
+        color: rgba(0, 0, 0, 0.541);
+        font-size: 1.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+    }
+
+    .nome > input[type=text]{
+        width: 100%;
+        height: 2em;
+        padding: 0.8rem;
+        border-radius: 0.5em; 
+        margin-left: 0px;
+        margin-top: 10px;
+        margin-right: 1em;
+        background-color: rgba(128, 128, 128, 0.082);
+        border: 0.1px solid #76678828;
+        font-size: 1.5em;
+    }
+
+    .inserir_foto{
+        grid-area: foto;
+        margin-left: 1em;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+    } 
+
+    .icone{
+        font-size: 3em;
+        margin: 0.2em;
+        color: rgba(0, 0, 0, 0.541);
+    }
+
+    #inserir-foto img{
+        height: 6rem;
+        width: 6rem;
+        cursor: pointer;
+    }
+
+    .raca{
+        grid-area: raca;
+    }
+
+    .raca select{
+        width: 100%;
+        padding-left: 30px;
+        border-radius: 0.5em; 
+        color: rgba(0, 0, 0, 0.541);
+        height: 3rem;
+        margin-left: 0px;
+        margin-bottom: 20px;
+        margin-top: 15px;
+        border: 0.1px solid #76678828;
+        background-color: rgba(128, 128, 128, 0.082);
+        font-size: 1.5em;
+    }
+
+    .nasc{
+        grid-area: nasc;
+        width: 90%;
+    }
+
+    .nasc > input[type=date]{
+        width: 100%;
+        height: 2em;
+        color: rgba(0, 0, 0, 0.541);
+        font-size: 1.5rem;
+        padding-left: 1em;
+        margin-top: 1em;
+        border-radius: 0.5em;        
+        border: 0.1px solid #76678828;
+        background-color: rgba(128, 128, 128, 0.082);
+    }
+
+    .sexo{
+        grid-area: sexo;
+    }
+
+    .sexo > input[type=radio]{
+        margin-top: 35px;
+        margin-right: 15px;
+    }
+
+    .sexo > label{
+        margin-right: 40px;
+    }
+
+    .perguntas{
+        grid-area: perguntas;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1em;
+    }
+    
+    .perguntas > div{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        width: 33%;
+    }
+    
+    .perguntas > div > select{
+        height: 50px;
+        width: 90%;
+        padding: 10px;
+        color: rgba(0, 0, 0, 0.541);
+        font-size: 1.5rem;
+        margin-top: 20px;
+        border-radius: 20px;        
+        border: 0.1px solid #76678828;
+        background-color: rgba(128, 128, 128, 0.082);
+    }
+
+    .descricao{
+        grid-area: descricao;
+        margin-top: 20px;
+    }
+
+    textarea{
+        width: 100%;
+        height: 10rem;
+        resize: none;
+        border-radius: 20px;        
+        border: 0.1px solid #76678828;
+        background-color: rgba(128, 128, 128, 0.082);
+        margin-top: 10px;
+        font-size: 1.4rem;
+        padding: 10px;
+    }
+
+    .save{
+        grid-area: botao;
+        border-radius: 1em;
+        margin: auto;
+        margin-top: 30px;
+        padding: 20px;
+        font-weight: bolder;
+        font-size: 1.4rem;
+        background-color: orange;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .save:hover{
+        opacity: .8;
+        transition: 200ms;
+    }
+   
+    label{        
+        color: rgba(0, 0, 0, 0.541);
+        font-size: 1.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 1315px){
+    .itens a{
+        font-size: 12px;
+    }
+}
