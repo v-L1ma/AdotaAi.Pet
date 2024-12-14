@@ -30,6 +30,8 @@ main{
 
     & p {
         width: 100%;
+        font-size: 1.1em;
+        font-weight: lighter;
     }
 }
 
@@ -40,7 +42,8 @@ main{
     gap: 2em;
     
     & p{
-        font-size: 1.1em;
+        font-size: 1em;
+        font-weight: lighter;
     }
 }
 
@@ -50,7 +53,6 @@ h1{
 }
 
 .gallery{
-    width: 80%;
     display: flex;
     gap: 2em;
     margin: 1em auto;
@@ -78,7 +80,7 @@ h1{
 }
 
 .setas{
-    font-size: 4em;
+    font-size: 5em;
     align-items: center;
     color: rgba(0, 0, 0, 0.473);
 }
@@ -87,7 +89,7 @@ h1{
 
 .card{
     height: 20em;
-    width: 15em;
+    width: 30em;
     overflow: hidden;
     background-color: antiquewhite;
     display: flex;
