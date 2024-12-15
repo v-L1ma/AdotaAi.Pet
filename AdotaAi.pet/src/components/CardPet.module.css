@@ -1,0 +1,50 @@
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 19em;
+    height: 25em;
+    border-radius: 10px;
+    box-shadow: 0px 0 20px -10px rgba(0, 0, 0, 0.418);
+    overflow: hidden;
+}
+
+.imagem{
+    height: 30em;
+    background-color: #71556b;
+    overflow: hidden;
+    
+}
+
+.imagem img{
+    
+    object-fit: cover; /* ajusta a imagem para preencher a div */
+    object-position: center; /* opcional: centraliza a imagem */
+    border-radius: 5px 5px 0px 0px;
+}
+
+.infos{
+    background-color: #ffffff;
+    padding: 1em;
+    height: 10em;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+
+.nome{
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: #766788;
+}
+
+.infos p{
+    color: grey;
+}
+
+.infos a{
+    text-decoration: none;    
+    color: #766788;
+}
+
+
