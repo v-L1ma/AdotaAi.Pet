@@ -72,7 +72,7 @@
     margin-top: 2em;
     gap: 2em;
     display: grid;
-    grid-template-columns: 19em 19em 19em;
+    grid-template-columns: 19em 19em 19em 19em;
     justify-content: center;
 }
 
