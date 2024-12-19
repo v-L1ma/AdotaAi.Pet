@@ -7,6 +7,8 @@ import Adotar from './pages/Adotar'
 import Doar from './pages/Doar'
 import Ongs from './pages/Ongs'
 import Home from './pages/Home'
+import StoreProvider from './components/Store/provider'
+import RoutesPrivate from './components/Routes/Private'
 
 function App() {
 
@@ -15,13 +17,15 @@ function App() {
 
           <NavBar/>
 
+            <StoreProvider>
             <Routes>
               <Route path="/" element={<Home/>}/>
-              <Route path="/adotar" element={<Adotar/>}/>
+              <RoutesPrivate path="/adotar" element={<Adotar/>}/>
               <Route path="/doar" element={<Doar/>}/>
               <Route path="/ongs" element={<Ongs/>}/>
             </Routes>
-            
+            </StoreProvider>
+
           <Footer/>
       </Router>
   )
