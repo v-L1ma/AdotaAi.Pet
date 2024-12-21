@@ -15,8 +15,6 @@ function Adotar() {
 
     listaAnimais()
 
-
-
   }, [])
 
   return (
@@ -56,7 +54,7 @@ function Adotar() {
 
         <div className={styles.gallery}>
           {animais.map((animais) => (
-            <CardPet animais={animais} />
+            <CardPet animais={animais} key={animais.id} />
           ))}
         </div>
       </div>

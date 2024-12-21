@@ -4,13 +4,9 @@ import { FaCamera } from "react-icons/fa";
 import api from '../sevices/api';
 
 function Doar(){
-
-    const [abrirPopup, setAbrirPopup] = useState(false)
-    const [animais, setAnimais] = useState([])
-    const [raca, setRaca] = useState("")
     const inputNome = useRef()
-    const inputFoto = useRef()
     const inputRaca = useRef()
+    const inputFoto = useRef()
     const inputDataNasc = useRef()
     const inputSexo = useRef()
     const selectVacinado = useRef()
@@ -19,10 +15,20 @@ function Doar(){
     const inputDesc = useRef()
 
     async function cadastrarAnimais() {
-        console.log(inputNome.current.value)
-       // console.log(inputFoto) arrumar
-        console.log(inputRaca.current.value)
-        console.log(inputSexo.current.value)
+
+        await api.post('/animais', {
+
+            nome:  inputNome.current.value,
+            raca:  inputRaca.current.value,
+            foto: inputFoto.current.value,
+            datanasc: inputDataNasc.current.value,
+            sexo: inputSexo.current.value,
+            vacinado: selectVacinado.current.value,
+            castrado: selectCastrado.current.value,
+            vermifugado: selectVermifugado.current.value,
+            descricao: inputDesc.current.value
+        })
+
     }
 
     
@@ -48,33 +54,24 @@ function Doar(){
                 />
             </div>
 
-            <div className={styles.inserir_foto} onClick={()=> setAbrirPopup(true)}>
+            <div className={styles.inserir_foto}>
                 <FaCamera className={styles.icone}/>
-                <label for="foto">Escolha uma foto</label>
+                <label htmlFor="foto">Escolha uma foto</label>
+                <input 
+                type="text" 
+                name="foto" 
+                id="foto" 
+                placeholder='Insira o URL da imagem'
+                ref={inputFoto}/>
             </div>
 
-            {
-            abrirPopup  && (
-                <div className={styles.popup}>
-                    <div className={styles.top}>
-                            <h1>Insira o URL da Imagem</h1>
-                            <button onClick={()=>setAbrirPopup(false)}>X</button>
-                    </div>
-                    <div className={styles.content}>
-                                <input 
-                                type="text" 
-                                name='url' 
-                                ref={inputFoto}/>
-                    </div>
-                </div>
-            )
-        }
+            
             
             <div className={styles.raca}>
                 <p>Raça</p>
                 <select id="raças" name="raças" ref={inputRaca}>
-                    <option value="" selected>-- Escolha uma raça --</option>
-                    <option value="">Vira-lata (indefinida)</option>
+                    <option disabled defaultValue>-- Escolha uma raça --</option>
+                    <option value="Vira-lata">Vira-lata (indefinida)</option>
                     <option value="affenpinscher">Affenpinscher</option>
                     <option value="akita-inu">Akita Inu</option>
                     <option value="akita-americano">Akita Americano</option>
@@ -126,9 +123,10 @@ function Doar(){
                 <input type="date" name="nasc" id="nasc" ref={inputDataNasc}/>
             </div>    
             
-            <div className={styles.sexo} ref={inputSexo}>
+            <div className={styles.sexo}>
                 <p>Sexo:</p>
-                <select name="" id="">
+                <select name="" id="" ref={inputSexo}>
+                        <option>Escolha o sexo</option>
                         <option value="Macho">Macho</option>
                         <option value="Femea">Fêmea</option>
                 </select>
@@ -136,34 +134,34 @@ function Doar(){
             
             <div className={styles.perguntas}>
                 <div>                
-                    <label for="vacinado">Vacinado?</label>
+                    <label htmlFor="vacinado">Vacinado?</label>
                     <select name="" id="" ref={selectVacinado}>
-                        <option value="">Sim</option>
-                        <option value="">Não</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Nao">Não</option>
                     </select>
                 </div>            
             
                 <div>
-                    <label for="castrado">Castrado?</label>
+                    <label htmlFor="castrado">Castrado?</label>
                     <select name="" id="" ref={selectCastrado}>
-                        <option value="">Sim</option>
-                        <option value="">Não</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Nao">Não</option>
                     </select>
                 </div>
             
                 <div>
-                    <label for="vermifugado">vermifugado?</label>
+                    <label htmlFor="vermifugado">vermifugado?</label>
                     <select name="" id="" ref={selectVermifugado}>
-                        <option value="">Sim</option>
-                        <option value="">Não</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Nao">Não</option>
                     </select>
                 </div>
             </div>
             
             <div className={styles.descricao}>    
-                <label for="descricao">Breve descrição</label>
+                <label htmlFor="descricao">Breve descrição</label>
                 <br/>
-                <textarea name="descricao" id="descricao" required maxlength="150" ref={inputDesc}></textarea>
+                <textarea name="descricao" id="descricao" required ref={inputDesc}></textarea>
             </div>
 
             <button onClick={cadastrarAnimais} className={styles.save}>Salvar & Continuar</button>

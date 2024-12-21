@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 2em;
+    padding: 2em;
+    gap: 1em;
+
+    & img{
+        height: 30em;
+        width: 30em;
+    }
+}
+
+
