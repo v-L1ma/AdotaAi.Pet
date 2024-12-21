@@ -4,12 +4,37 @@
     box-sizing: border-box;
     border-radius: 2em;
     padding: 2em;
-    gap: 1em;
+    gap: 3em;
 
     & img{
         height: 30em;
         width: 30em;
     }
+}
+
+.sobre{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.sobre p{
+        font-size: 1.5em;
+        font-weight: normal;        
+        color: rgba(0, 0, 0, 0.719);
+    
+}
+
+.sobre .loc{
+    font-size: 1.1em;
+    font-weight: normal;
+    color: rgb(161, 161, 161);
+    margin-bottom: 0.5em;
+}
+
+.infos{
+    font-size: 1em;
 }
 
 
